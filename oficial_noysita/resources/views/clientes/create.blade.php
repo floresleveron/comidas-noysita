@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{route('clientes.store')}}" method="post">
+<form action="{{route('clientes.store')}}" method="post" class="was-validated">
     @csrf
 <div class="col-md-12" novalidate><br>
         <div class="card card-primary">
@@ -20,7 +20,7 @@
                 <div class="col-6">
             <div class="form-group">
                 <label for="">Nombre Cliente</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre')}}" required>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre')}}" required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
                 @error('nombre')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -29,7 +29,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Identidad</label>
-                <input type="text" class="form-control" id="identidad" name="identidad" placeholder=""value="{{old('identidad')}}">
+                <input type="text" class="form-control" id="identidad" name="identidad" placeholder=""value="{{old('identidad')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUNMEROS</div>
                 @error('identidad')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -40,7 +40,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">RTN</label>
-                <input type="text" class="form-control" id="rtn" name="rtn" placeholder="" value="{{old('rtn')}}">
+                <input type="text" class="form-control" id="rtn" name="rtn" placeholder="" value="{{old('rtn')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMERO</div>
                 @error('rtn')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -49,7 +49,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Tipo Pago</label>
-                <input type="text" class="form-control" id="tipo_pago" name="tipo_pago" placeholder="" value="{{old('tipo_pago')}}">
+                <input type="text" class="form-control" id="tipo_pago" name="tipo_pago" placeholder="" value="{{old('tipo_pago')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
                 @error('tipo_pago')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -60,7 +60,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Direccion</label>
-                <textarea class="form-control" rows="3" name="direccion" id="direccion"  placeholder="">{{old('direccion')}}</textarea>
+                <input class="form-control" rows="3" name="direccion" id="direccion"  placeholder="" value="{{old('dirreccion')}}"required>  <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
                 @error('direccion')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -69,7 +69,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Ingreso Cliente</label>
-                <input type="date" class="form-control" id="ingreso_cliente" name="ingreso_cliente" placeholder="" value="{{old('ingreso_cliente')}}">
+                <input type="date" class="form-control" id="ingreso_cliente" name="ingreso_cliente" placeholder="" value="{{old('ingreso_cliente')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UNA FECHA</div>
                 @error('ingreso_cliente')
                 <span class="text-danger">{{$message}}</span>
                 @enderror

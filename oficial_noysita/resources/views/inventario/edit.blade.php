@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('inventario.update', $inventarios) }}" method="POST">
+<form action="{{ route('inventario.update', $inventarios) }}" method="POST" class="was-validated">
    @csrf
    @method('PUT')
    <div class="col-md-12"><br>
@@ -21,7 +21,7 @@
             <div class="col-6">
         <div class="form-group">
             <label for="">Nombre Producto</label>
-            <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" placeholder="" value="{{old('nombre_producto', $inventarios['NOMBRE_PRODUCTO'])}}">
+            <input type="text" class="form-control" id="nombre_producto" name="nombre_producto" placeholder="" value="{{old('nombre_producto', $inventarios['NOMBRE_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('nombre_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -30,7 +30,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Precio Producto</label>
-            <input type="number" class="form-control" id="precio_producto" name="precio_producto" placeholder=""value="{{old('precio_producto',$inventarios['PRECIO_PRODUCTO'])}}">
+            <input type="number" class="form-control" id="precio_producto" name="precio_producto" placeholder=""value="{{old('precio_producto',$inventarios['PRECIO_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMERO</div>
             @error('precio_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -41,7 +41,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Cantidad Producto</label>
-            <input type="number" class="form-control" id="cantidad_producto" name="cantidad_producto" placeholder="" value="{{old('cantidad_producto',$inventarios['CANTIDAD_PRODUCTO'])}}">
+            <input type="number" class="form-control" id="cantidad_producto" name="cantidad_producto" placeholder="" value="{{old('cantidad_producto',$inventarios['CANTIDAD_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
             @error('cantidad_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -50,7 +50,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Categoria Producto</label>
-            <input type="text" class="form-control" id="categoria_producto" name="categoria_producto" placeholder="" value="{{old('categoria_producto',$inventarios['CATEGORIA_PRODUCTO'])}}">
+            <input type="text" class="form-control" id="categoria_producto" name="categoria_producto" placeholder="" value="{{old('categoria_producto',$inventarios['CATEGORIA_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('categoria_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -61,7 +61,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Fecha Vencimiento</label>
-            <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="" value="{{old('fecha_vencimiento',$inventarios['FECHA_VENCIMIENTO'])}}">
+            <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="" value="{{old('fecha_vencimiento',$inventarios['FECHA_VENCIMIENTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UNA FECHA</div>
             @error('fecha_vencimiento')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -71,7 +71,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Maximo Producto</label>
-            <input type="number" class="form-control" id="maximo_producto" name="maximo_producto" placeholder="" value="{{old('maximo_producto',$inventarios['MAXIMO_PRODUCTO'])}}">
+            <input type="number" class="form-control" id="maximo_producto" name="maximo_producto" placeholder="" value="{{old('maximo_producto',$inventarios['MAXIMO_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
             @error('maximo_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -81,7 +81,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Minimo Producto</label>
-            <input type="number" class="form-control" id="minimo_producto" name="minimo_producto" placeholder="" value="{{old('minimo_producto',$inventarios['MINIMO_PRODUCTO'])}}">
+            <input type="number" class="form-control" id="minimo_producto" name="minimo_producto" placeholder="" value="{{old('minimo_producto',$inventarios['MINIMO_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
             @error('minimo_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror

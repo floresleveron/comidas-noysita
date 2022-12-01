@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{route('empleados.store')}}" method="post">
+<form action="{{route('empleados.store')}}" method="post" class="was-validated">
     @csrf
 <div class="col-md-12"><br>
         <div class="card card-primary">
@@ -20,7 +20,7 @@
                 <div class="col-6">
             <div class="form-group">
                 <label for="">Nombre Empleado</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre')}}">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre')}}" required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
                 @error('nombre')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -29,7 +29,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Identidad</label>
-                <input type="number" class="form-control" id="identidad" name="identidad" placeholder=""value="{{old('identidad')}}">
+                <input type="number" class="form-control" id="identidad" name="identidad" placeholder=""value="{{old('identidad')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
                 @error('identidad')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -40,7 +40,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Edad</label>
-                <input type="number" class="form-control" id="edad" name="edad" placeholder="" value="{{old('edad')}}">
+                <input type="number" class="form-control" id="edad" name="edad" placeholder="" value="{{old('edad')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
                 @error('edad')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -49,7 +49,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Correo empleado</label>
-                <input type="text" class="form-control" id="correo_empleado" name="correo_empleado" placeholder="" value="{{old('correo_empleado')}}">
+                <input type="text" class="form-control" id="correo_empleado" name="correo_empleado" placeholder="" value="{{old('correo_empleado')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UN CORREO VALIDO</div>
                 @error('correo_empleado')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -60,7 +60,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Numero Celular</label>
-                <input type="number" class="form-control"  name="numero_celular" id="numero_celular"  placeholder="" value="{{old('numero_celular')}}">
+                <input type="number" class="form-control"  name="numero_celular" id="numero_celular"  placeholder="" value="{{old('numero_celular')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
                 @error('numero_celular')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -69,7 +69,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">Estado Civil</label>
-                <input type="text" class="form-control" id="estado_civil" name="estado_civil" placeholder="" value="{{old('estado_civil')}}">
+                <input type="text" class="form-control" id="estado_civil" name="estado_civil" placeholder="" value="{{old('estado_civil')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
                 @error('estado_civil')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -80,7 +80,7 @@
               <div class="col-6">
               <div class="form-group">
                 <label for="">Inicio Contrato</label>
-                <input type="date" class="form-control" id="inicio_contrato" name="inicio_contrato" placeholder="" value="{{old('inicio_contrato')}}">
+                <input type="date" class="form-control" id="inicio_contrato" name="inicio_contrato" placeholder="" value="{{old('inicio_contrato')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UNA FECHA</div>
                 @error('inicio_contrato')
                 <span class="text-danger">{{$message}}</span>
                 @enderror
@@ -89,7 +89,7 @@
             <div class="col-6">
           <div class="form-group">
               <label for="">Cargo Empleado</label>
-              <input type="text" class="form-control" id="cargo_empleado" name="cargo_empleado" placeholder="" value="{{old('cargo_empleado')}}">
+              <input type="text" class="form-control" id="cargo_empleado" name="cargo_empleado" placeholder="" value="{{old('cargo_empleado')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
               @error('cargo_empleado')
               <span class="text-danger">{{$message}}</span>
               @enderror
@@ -102,7 +102,7 @@
           <div class="col-6">
           <div class="form-group">
               <label for="">Salario</label>
-              <input type="number" class="form-control" id="salario" name="salario" placeholder="" value="{{old('salario')}}">
+              <input type="number" class="form-control" id="salario" name="salario" placeholder="" value="{{old('salario')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
               @error('salario')
               <span class="text-danger">{{$message}}</span>
               @enderror
@@ -111,7 +111,7 @@
         <div class="col-6">
           <div class="form-group">
               <label for="">Fecha ingreso</label>
-              <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" placeholder="" value="{{old('fecha_ingreso')}}">
+              <input type="date" class="form-control" id="fecha_ingreso" name="fecha_ingreso" placeholder="" value="{{old('fecha_ingreso')}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UNA FEHCHA</div>
               @error('fecha_ingreso')
               <span class="text-danger">{{$message}}</span>
               @enderror

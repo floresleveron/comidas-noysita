@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('platillos.update', $platillos) }}" method="POST">
+<form action="{{ route('platillos.update', $platillos) }}" method="POST" class="was-validated">
    @csrf
    @method('PUT')
    <div class="col-md-12"><br>
@@ -21,7 +21,7 @@
             <div class="col-6">
         <div class="form-group">
             <label for="">Nombre Platillo</label>
-            <input type="text" class="form-control" id="nombre_platillo" name="nombre_platillo" placeholder="" value="{{old('nombre_platillo', $platillos['NOMBRE_PLATILLO'])}}">
+            <input type="text" class="form-control" id="nombre_platillo" name="nombre_platillo" placeholder="" value="{{old('nombre_platillo', $platillos['NOMBRE_PLATILLO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('nombre_platillo')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -30,7 +30,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Precio Platillo</label>
-            <input type="number" class="form-control" id="precio_platillo" name="precio_platillo" placeholder=""value="{{old('precio_platillo', $platillos['PRECIO_PLATILLO'])}}">
+            <input type="number" class="form-control" id="precio_platillo" name="precio_platillo" placeholder=""value="{{old('precio_platillo', $platillos['PRECIO_PLATILLO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
             @error('precio_platillo')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -41,7 +41,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Receta Platillos</label>
-            <input type="text" class="form-control" id="receta_platillo" name="receta_platillo" placeholder="" value="{{old('receta_platillo', $platillos['RECETA_PLATILLO'])}}">
+            <input type="text" class="form-control" id="receta_platillo" name="receta_platillo" placeholder="" value="{{old('receta_platillo', $platillos['RECETA_PLATILLO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('receta_platillo')
             <span class="text-danger">{{$message}}</span>
             @enderror

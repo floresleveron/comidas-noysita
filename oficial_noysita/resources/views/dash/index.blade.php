@@ -14,7 +14,7 @@
         <div class="row wrap-service-22">
             <!-- Column -->
             <div class="col-lg-6"> 
-							<img src="https://scontent.ftgu3-4.fna.fbcdn.net/v/t1.6435-9/129140154_3305335326244059_3905055941769180687_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeFC4YIN9mcLamh1oQBEAEGgf97TwleLy6l_3tPCV4vLqUdWAyUJpV0fCFqofQ9ZOEpP-Wj0CtYxNnp9vN2QplqY&_nc_ohc=DmcnliB_LZIAX-Yz3Fg&_nc_ht=scontent.ftgu3-4.fna&oh=00_AfDE62_fpzp9uIW5kOG8VELPt1lfPHUXmJ7fjyn2R0QvhQ&oe=6381826A" class="rounded img-shadow img-fluid" alt="wrapkit" /> 
+							<img src="https://img.freepik.com/foto-gratis/pollo-frito-crujiente-plato-ensalada-zanahoria_1150-20212.jpg?w=740&t=st=1669740471~exp=1669741071~hmac=5649d3e43875d74a6eb8ef5e00dedd224f9dd4c0b3cced426b0448ddb69fffed" class="rounded img-shadow img-fluid" alt="wrapkit" /> 
 						</div>
             <!-- Column -->
             <div class="col-lg-6 mt-4 mt-md-0">

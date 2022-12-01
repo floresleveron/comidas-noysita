@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('cai.update', $CAIS) }}" method="POST">
+<form action="{{ route('cai.update', $CAIS) }}" method="POST"  class="was-validated">
    @csrf
    @method('PUT')
    <div class="col-md-12"><br>
@@ -21,7 +21,7 @@
             <div class="col-6">
         <div class="form-group">
             <label for="">CAI</label>
-            <input type="text" class="form-control" id="cai" name="cai" placeholder="" value="{{old('cai',$CAIS['CAI'])}}">
+            <input type="text" class="form-control" id="cai" name="cai" placeholder="" value="{{old('cai',$CAIS['CAI'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS Y LETRAS</div>
             @error('cai')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -30,7 +30,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Tipo Documento</label>
-            <input type="text" class="form-control" id="tipo_documento" name="tipo_documento" placeholder=""value="{{old('tipo_documento',$CAIS['TIPO_DOCUMENTO'])}}">
+            <input type="text" class="form-control" id="tipo_documento" name="tipo_documento" placeholder=""value="{{old('tipo_documento',$CAIS['TIPO_DOCUMENTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('tipo_documento')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -41,7 +41,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Valor Fiscal</label>
-            <input type="text" class="form-control" id="valor_fiscal" name="valor_fiscal" placeholder="" value="{{old('valor_fiscal',$CAIS['VALOR_FISCAL'])}}">
+            <input type="text" class="form-control" id="valor_fiscal" name="valor_fiscal" placeholder="" value="{{old('valor_fiscal',$CAIS['VALOR_FISCAL'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('valor_fiscal')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -50,7 +50,7 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Fecha Vencimiento</label>
-            <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="" value="{{old('fecha_vencimiento',$CAIS['FECHA_VENCIMIENTO'])}}">
+            <input type="date" class="form-control" id="fecha_vencimiento" name="fecha_vencimiento" placeholder="" value="{{old('fecha_vencimiento',$CAIS['FECHA_VENCIMIENTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA UNA FECHA</div>
             @error('fecha_vencimiento')
             <span class="text-danger">{{$message}}</span>
             @enderror

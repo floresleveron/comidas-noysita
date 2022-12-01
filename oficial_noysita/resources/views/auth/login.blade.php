@@ -26,7 +26,7 @@
          <form method="POST" action="{{ route('login') }}">
             @csrf
              <div class="text-center">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" style="width: 1000;" alt="logo">
+                <img src="https://img.freepik.com/vector-gratis/concepto-abstracto-sistema-control-acceso_335657-3180.jpg?w=740&t=st=1669743057~exp=1669743657~hmac=d7ee95e73446ad6122ffa16d8b92eb01e8f6330041cef50dce45434f73013457" style="width: 1000;" alt="logo">
                   <h4 class="mt-1 mb-5 pb-1">LOGIN COMIDAS NOYSITA</h4>
                 </div>
             <!-- Email Address -->

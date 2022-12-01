@@ -41,6 +41,7 @@ class ValidacionEmpleado extends FormRequest
     {
         return[
             /* Validacion campo NOMBRE EMPLEADO */
+            
              'nombre.required' => 'El campo nombre Empleado es requerido. No puede estar vacio.' ,
              'nombre.alpha_spaces' => 'El campo nombre Empleado solo puede contener letras.' ,
              /* Validacion campo IDENTIDAD */

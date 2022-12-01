@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form action="{{ route('proveedor.update', $proveedores) }}" method="POST">
+<form action="{{ route('proveedor.update', $proveedores) }}" method="POST" class="was-validated">
    @csrf
    @method('PUT')
    <div class="col-md-12"><br>
@@ -21,7 +21,7 @@
             <div class="col-6">
         <div class="form-group">
             <label for="">Nombre Proveedor</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre', $proveedores['NOMBRE_PROVEEDOR'])}}">
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" value="{{old('nombre', $proveedores['NOMBRE_PROVEEDOR'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
             @error('nombre')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -30,7 +30,8 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Celular</label>
-            <input type="number" class="form-control" id="celular_proveedor" name="celular_proveedor" placeholder=""value="{{old('celular_proveedor', $proveedores['CELULAR_PROVEEDOR'])}}">
+            <input type="number" class="form-control" id="celular_proveedor" name="celular_proveedor" placeholder=""value="{{old('celular_proveedor', $proveedores['CELULAR_PROVEEDOR'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
+
             @error('celular_proveedor')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -41,7 +42,8 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Producto de  Venta</label>
-            <input type="text" class="form-control" id="producto_venta" name="producto_venta" placeholder="" value="{{old('producto_venta', $proveedores['PRODUCTO_VENTA'])}}">
+            <input type="text" class="form-control" id="producto_venta" name="producto_venta" placeholder="" value="{{old('producto_venta', $proveedores['PRODUCTO_VENTA'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
+           
             @error('producto_venta')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -50,7 +52,8 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Precio de Producto</label>
-            <input type="number" class="form-control" id="precio_producto" name="precio_producto" placeholder="" value="{{old('precio_producto', $proveedores['PRECIO_PRODUCTO'])}}">
+            <input type="number" class="form-control" id="precio_producto" name="precio_producto" placeholder="" value="{{old('precio_producto', $proveedores['PRECIO_PRODUCTO'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
+          
             @error('precio_producto')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -61,7 +64,8 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Ciudad</label>
-            <input type="text" class="form-control" id="ciudad_proveedor" name="ciudad_proveedor" placeholder="" value="{{old('ciudad_proveedor', $proveedores['CIUDAD_PROVEEDOR'])}}">
+            <input type="text" class="form-control" id="ciudad_proveedor" name="ciudad_proveedor" placeholder="" value="{{old('ciudad_proveedor', $proveedores['CIUDAD_PROVEEDOR'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
+           
             @error('ciudad_proveedor')
             <span class="text-danger">{{$message}}</span>
             @enderror
@@ -70,7 +74,8 @@
       <div class="col-6">
         <div class="form-group">
             <label for="">Observacion</label>
-            <input type="text" class="form-control" id="observacion" name="observacion" placeholder="" value="{{old('observacion', $proveedores['OBSERVACION'])}}">
+            <input type="text" class="form-control" id="observacion" name="observacion" placeholder="" value="{{old('observacion', $proveedores['OBSERVACION'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO LETRAS</div>
+             
             @error('observacion')
             <span class="text-danger">{{$message}}</span>
             @enderror

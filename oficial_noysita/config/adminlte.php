@@ -392,6 +392,17 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => ' Rol de usuarios',
+            'icon' => 'fas fa-shield-alt',
+            
+            'submenu' => [
+                [
+                    'text' => 'roles',
+                    'route'  => 'logs.index',
+                ],
+            ],
+        ],
         
     ],
 
