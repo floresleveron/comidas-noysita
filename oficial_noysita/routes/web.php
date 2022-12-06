@@ -1,6 +1,7 @@
 <?php
 //poner eso para que reconozca la ruta de abajo
 
+use App\Http\Controllers\BitacoraController;
 use App\Http\Controllers\caicontroller;
 use App\Http\Controllers\clientecontroller;
 use App\Http\Controllers\compracontroller;
@@ -11,6 +12,8 @@ use App\Http\Controllers\logscontroller;
 use App\Http\Controllers\platilloscontroller;
 use App\Http\Controllers\proveedorcontroller;
 use App\Http\Controllers\perfilcontroller;
+use App\Http\Controllers\respaldoController;
+use App\Http\Controllers\RolController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -49,6 +52,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('factura',facturacontroller::class)->names('factura');
     Route::resource('perfil',perfilcontroller::class)->names('perfil');
     Route::resource('logs',\Rap2hpoutre\LaravelLogViewer\LogViewerController::class)->names('logs');
+    Route::resource('rol',RolController::class)->names('rol');
+    Route::resource('bitacora',BitacoraController::class)->names('bitacora');
+    Route::resource('respaldo',respaldoController::class)->names('respaldo');
     
     //  Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 

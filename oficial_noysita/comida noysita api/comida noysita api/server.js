@@ -26,7 +26,8 @@ app.use(require('./rutas/inventarios'))
 app.use(require('./rutas/cai'))
 app.use(require('./rutas/facturas'))
 app.use(require('./rutas/platillos'))
-
+app.use(require('./rutas/rol'))
+app.use(require('./rutas/bitacora'))
  // Server running
 app.listen(app.get('port'), () =>{
     console.log('Server running on port',app.get('port'))

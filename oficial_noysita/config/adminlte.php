@@ -393,17 +393,37 @@ return [
             ],
         ],
         [
-            'text'    => ' Rol de usuarios',
-            'icon' => 'fas fa-shield-alt',
+            'text'    => ' Rol de usuarios y bitacora',
+            'icon' => 'fas fa-user-shield',
             
             'submenu' => [
                 [
                     'text' => 'roles',
-                    'route'  => 'logs.index',
+                    'route'  => 'rol.index',
+                ],
+                [
+                    'text' => 'bitacora',
+                    'route'  => 'bitacora.index',
                 ],
             ],
+            
         ],
+        ['header' => 'RESPALDO DEL SISTEMA'],
+        //modulos Bitacora
         
+       //modulos Bitacora
+       [
+           'text'    => ' Respaldo ',
+           'icon' => 'fas fa-download',
+           
+           'submenu' => [
+               [
+                   'text' => 'Gestion de Respaldo',
+                   'route'  => 'respaldo.index',
+               ],
+           ],
+       ],
+
     ],
 
 
