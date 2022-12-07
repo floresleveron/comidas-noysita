@@ -41,7 +41,7 @@
           <div class="col-6">
             <div class="form-group">
                 <label for="">RTN</label>
-                <input type="text" class="form-control" id="rtn" name="rtn" placeholder="" value="{{old('rtn', $clientes['RTN_CLIENTE'])}}">required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
+                <input type="text" class="form-control" id="rtn" name="rtn" placeholder="" value="{{old('rtn', $clientes['RTN_CLIENTE'])}}"required>    <div class="valid-feedback">DATO VALIDO.</div><div class="invalid-feedback">LOS CAMPOS NO PUEDEN ESTAR VACIOS.INTRODUZCA SOLO NUMEROS</div>
                 @error('rtn')
                 <span class="text-danger">{{$message}}</span>
                 @enderror

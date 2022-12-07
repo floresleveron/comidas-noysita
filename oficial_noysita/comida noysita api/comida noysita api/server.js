@@ -8,7 +8,7 @@ const app = express()
 app.set('port', process.env.PORT || 9000)
 const dbOptions = {
     host: 'localhost',
-    port: 3308,
+    port: 3309,
     user: 'root',
     password: '',
     database: 'noysita_oficial'
